@@ -7,11 +7,19 @@
       postgresql,
       postgresql-contrib,
       libpq-dev,
-      python-psycopg2
     ]
     state: present
     update_cache: yes
     force_apt_get: yes
+
+- name: Determine required psycopg2 Python libraries.
+  set_fact:
+    deb_psycopg2_python_package: "{% if 'python3' in ansible_python_interpreter|default('') %}python3-psycopg2{% else %}python-psycopg2{% endif %}"
+
+- name: Ensure psycopg2 libraries are installed.
+  apt:
+    name: "{{ deb_psycopg2_python_package }}"
+    state: present
 
 - include_tasks: global-sensitivity.yml
 - include_tasks: local-sensitivity.yml
