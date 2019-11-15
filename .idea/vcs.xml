@@ -6,7 +6,10 @@
     <mapping directory="$PROJECT_DIR$/pleak-combined-sensitivity-editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-frontend" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-guessing-advantage-editor" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pleak-leakage-detection-analysis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pleak-leaks-when-analysis" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-leaks-when-ast-transformation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pleak-leaks-when-ast-transformation/pleak-leaks-when-analysis" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-pe-bpmn-editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-sql-analysis" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-sql-derivative-sensitivity-editor" vcs="Git" />
