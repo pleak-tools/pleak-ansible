@@ -1,0 +1,33 @@
+[submodule "pleak-frontend"]
+	path = pleak-frontend
+	url = git@github.com:pleak-tools/pleak-frontend.git
+[submodule "pleak-backend"]
+	path = pleak-backend
+	url = git@github.com:pleak-tools/pleak-backend.git
+[submodule "pleak-pe-bpmn-editor"]
+	path = pleak-pe-bpmn-editor
+	url = git@github.com:pleak-tools/pleak-pe-bpmn-editor.git
+[submodule "pleak-sql-editor"]
+	path = pleak-sql-editor
+	url = git@github.com:pleak-tools/pleak-sql-editor.git
+[submodule "pleak-sql-derivative-sensitivity-editor"]
+	path = pleak-sql-derivative-sensitivity-editor
+	url = git@github.com:pleak-tools/pleak-sql-derivative-sensitivity-editor.git
+[submodule "pleak-guessing-advantage-editor"]
+	path = pleak-guessing-advantage-editor
+	url = git@github.com:pleak-tools/pleak-guessing-advantage-editor.git
+[submodule "pleak-combined-sensitivity-editor"]
+	path = pleak-combined-sensitivity-editor
+	url = git@github.com:pleak-tools/pleak-combined-sensitivity-editor.git
+[submodule "pleak-sql-analysis"]
+	path = pleak-sql-analysis
+	url = git@github.com:pleak-tools/pleak-sql-analysis.git
+[submodule "pleak-leaks-when-analysis"]
+	path = pleak-leaks-when-analysis
+	url = git@github.com:pleak-tools/pleak-leaks-when-analysis.git
+[submodule "pleak-leaks-when-ast-transformation"]
+	path = pleak-leaks-when-ast-transformation
+	url = git@github.com:pleak-tools/pleak-leaks-when-ast-transformation.git
+[submodule "pleak-leakage-detection-analysis"]
+	path = pleak-leakage-detection-analysis
+	url = git@github.com:pleak-tools/pleak-leakage-detection-analysis.git

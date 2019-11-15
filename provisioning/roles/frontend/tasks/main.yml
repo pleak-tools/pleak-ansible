@@ -1,0 +1,39 @@
+---
+- name: add apt key for nodesource
+  apt_key:
+    url: 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key'
+
+- name: add repo for nodesource
+  apt_repository:
+    repo: 'deb https://deb.nodesource.com/node_12.x bionic main'
+    update_cache: yes
+
+- name: install nodejs
+  apt:
+    name: nodejs
+    state: present
+    update_cache: yes
+    force_apt_get: yes
+
+- name: create frontend service
+  copy:
+    src: 'etc/systemd/system/pleak-frontend.service'
+    dest: '/etc/systemd/system/pleak-frontend.service'
+
+- name: Create folder for logs
+  file: name=/vagrant_data/pleak-frontend/log state=directory
+
+- name: Running NPM install
+  npm:
+    path: '/vagrant_data/pleak-frontend'
+
+- name: Build app
+  command: npm run build
+  args:
+    chdir: /vagrant_data/pleak-frontend/
+
+- name: Enable and start frontend service
+  systemd:
+    name: pleak-frontend
+    enabled: no
+    state: stopped

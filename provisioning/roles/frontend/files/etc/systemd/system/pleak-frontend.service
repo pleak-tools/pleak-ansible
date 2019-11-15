@@ -1,0 +1,15 @@
+[Unit]
+Description=Pleak application server on NodeJS
+
+[Service]
+ExecStart=/bin/sh -c "/usr/bin/node /vagrant_data/pleak-frontend/server.js"
+WorkingDirectory=/vagrant_data/pleak-frontend
+Restart=no
+RestartSec=1
+SyslogIdentifier=pleak-frontkend
+User=vagrant
+Group=vagrant
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

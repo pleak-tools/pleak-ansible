@@ -1,0 +1,14 @@
+[Unit]
+Description=Pleak backend server
+
+[Service]
+ExecStart=/bin/sh -c "mvn tomcat:run"
+WorkingDirectory=/vagrant_data/pleak-backend
+Restart=always
+RestartSec=1
+SyslogIdentifier=pleak-backend
+User=vagrant
+Group=vagrant
+
+[Install]
+WantedBy=multi-user.target

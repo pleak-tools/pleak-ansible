@@ -1,0 +1,17 @@
+[Unit]
+Description=Pleak leaks when analyser server on NodeJS
+#Requires=After=mysql.service
+
+[Service]
+ExecStart=/usr/bin/node /vagrant_data/pleak-leaks-when-ast-transformation/server.js
+WorkingDirectory=/vagrant_data/pleak-leaks-when-ast-transformation/
+Restart=no
+RestartSec=1
+SyslogIdentifier=pleak-leakswhen
+User=vagrant
+Group=vagrant
+Environment=NODE_ENV=production
+
+
+[Install]
+WantedBy=multi-user.target

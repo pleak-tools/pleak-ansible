@@ -1,0 +1,56 @@
+- name: init DS cabal
+  command: cabal sandbox init
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+    creates: /vagrant_data/pleak-sql-analysis/banach/cabal.sandbox.config
+  register: result
+
+- name: cabal update
+  command: cabal update
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+  when: result.changed
+
+- name: cabal install happy
+  command: cabal install happy
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+  when: result.changed
+
+- name: cabal install --only-dependencies
+  command: cabal install --only-dependencies
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+
+- name: cabal conf
+  command: cabal configure
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+
+- name: cabal build
+  command: cabal build
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/banach/
+
+- name: Create a new database with name "banach"
+  become: true
+  become_user: postgres
+  postgresql_db:
+    name: banach
+
+- name: Grant access
+  become: true
+  become_user: postgres
+  postgresql_privs:
+    db: banach
+    type: database
+    privs: ALL
+    roles: PUBLIC
+
+- name: create user
+  become: true
+  become_user: postgres
+  postgresql_user:
+    db: banach
+    name: vagrant
+    priv: ALL

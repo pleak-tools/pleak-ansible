@@ -1,0 +1,6 @@
+- shell: mysql -e 'SHOW DATABASES;'| grep pleak
+  register: result
+  failed_when: result.rc == 2
+
+- debug:
+    var: result

@@ -1,0 +1,32 @@
+---
+- name: Set locale to UTF-8
+  locale_gen:
+    name: en_US.UTF-8
+    state: present
+
+- name: Configure locale package env locale
+  debconf:
+    name: locales
+    question: 'locales/default_environment_locale'
+    value: n_US.UTF-8
+    vtype: 'select'
+
+- name: Install base packages
+  apt:
+    name: [
+      'ntp',
+      'vim',
+      'curl',
+      'wget',
+      'build-essential',
+      'software-properties-common',
+      'git',
+      'ubuntu-keyring',
+      'ca-certificates',
+      'apt-transport-https',
+      'python-pymysql'
+    ]
+    state: present
+    update_cache: yes
+    force_apt_get: yes
+

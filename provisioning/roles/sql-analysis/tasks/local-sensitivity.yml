@@ -1,0 +1,33 @@
+- name: init GS cabal
+  command: cabal sandbox init
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/
+    creates: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/cabal.sandbox.config
+  register: result
+
+- name: cabal update
+  command: cabal update
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/
+  when: result.changed
+
+- name: cabal install happy
+  command: cabal install happy
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/
+  when: result.changed
+
+- name: cabal install --only-dependencies
+  command: cabal install --only-dependencies
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/
+
+- name: cabal conf
+  command: cabal configure
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/
+
+- name: cabal build
+  command: cabal build
+  args:
+    chdir: /vagrant_data/pleak-sql-analysis/localsensitivity-cabal/

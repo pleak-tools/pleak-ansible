@@ -1,0 +1,16 @@
+- name: configure and deploy the webservers and application code
+  hosts: all
+  become: yes
+
+  roles:
+    - common
+    - frontend
+    - mysql
+    - backend
+    - pe-bpmn-editor
+    - sql-editor
+    - ga-editor
+    - cs-editor
+    - ds-editor
+    - sql-analysis
+    - leaks-when
