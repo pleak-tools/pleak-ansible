@@ -1,0 +1,15 @@
+- name: init cabal
+  command: cabal sandbox init
+  register: result
+
+- name: cabal inst
+  command: cabal install --only-dependencies
+  args:
+    chdir: /vagrant_data/sql-constraint-propagation
+  when: result.changed
+
+- name: cabal configure
+  command: cabal configure
+
+- name: cabal build
+  command: cabal build

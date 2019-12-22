@@ -14,3 +14,4 @@
     - ds-editor
     - sql-analysis
     - leaks-when
+    - sql-constraints
