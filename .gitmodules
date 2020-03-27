@@ -22,9 +22,9 @@
 [submodule "pleak-leakage-detection-analysis"]
 	path = pleak-leakage-detection-analysis
 	url = git@github.com:pleak-tools/pleak-leakage-detection-analysis.git
-[submodule "sql-constraint-propagation"]
-	path = sql-constraint-propagation
-	url = https://github.com/fs191/sql-constraint-propagation
 [submodule "pleak-sensitivities-editor"]
 	path = pleak-sensitivities-editor
 	url = git@github.com:pleak-tools/pleak-sensitivities-editor.git
+[submodule "pleak-sql-constraint-propagation"]
+	path = pleak-sql-constraint-propagation
+	url = git@github.com:pleak-tools/pleak-sql-constraint-propagation.git
