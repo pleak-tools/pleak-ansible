@@ -7,18 +7,9 @@
 [submodule "pleak-pe-bpmn-editor"]
 	path = pleak-pe-bpmn-editor
 	url = git@github.com:pleak-tools/pleak-pe-bpmn-editor.git
-[submodule "pleak-sql-editor"]
-	path = pleak-sql-editor
-	url = git@github.com:pleak-tools/pleak-sql-editor.git
-[submodule "pleak-sql-derivative-sensitivity-editor"]
-	path = pleak-sql-derivative-sensitivity-editor
-	url = git@github.com:pleak-tools/pleak-sql-derivative-sensitivity-editor.git
 [submodule "pleak-guessing-advantage-editor"]
 	path = pleak-guessing-advantage-editor
 	url = git@github.com:pleak-tools/pleak-guessing-advantage-editor.git
-[submodule "pleak-combined-sensitivity-editor"]
-	path = pleak-combined-sensitivity-editor
-	url = git@github.com:pleak-tools/pleak-combined-sensitivity-editor.git
 [submodule "pleak-sql-analysis"]
 	path = pleak-sql-analysis
 	url = git@github.com:pleak-tools/pleak-sql-analysis.git
@@ -34,3 +25,6 @@
 [submodule "sql-constraint-propagation"]
 	path = sql-constraint-propagation
 	url = https://github.com/fs191/sql-constraint-propagation
+[submodule "pleak-sensitivities-editor"]
+	path = pleak-sensitivities-editor
+	url = git@github.com:pleak-tools/pleak-sensitivities-editor.git

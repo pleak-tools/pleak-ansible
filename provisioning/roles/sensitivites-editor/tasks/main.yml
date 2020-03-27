@@ -2,9 +2,9 @@
 - name: Running NPM install
   command: npm install --ignore-scripts
   args:
-    chdir: /vagrant_data/pleak-sql-editor/
+    chdir: /vagrant_data/pleak-sensitivites-editor/
 
 - name: Build app
   command: npm run build
   args:
-    chdir: /vagrant_data/pleak-sql-editor/
+    chdir: /vagrant_data/pleak-sensitivites-editor/

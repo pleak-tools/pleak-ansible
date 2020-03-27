@@ -8,10 +8,8 @@
     - mysql
     - backend
     - pe-bpmn-editor
-    - sql-editor
     - ga-editor
-    - cs-editor
-    - ds-editor
+    - sensitivites-editor
     - sql-analysis
     - leaks-when
     - sql-constraints
