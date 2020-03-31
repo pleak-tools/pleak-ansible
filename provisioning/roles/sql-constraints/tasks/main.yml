@@ -1,41 +1,41 @@
 - name: init cabal
   command: cabal sandbox init
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   register: result
 
 - name: cabal upd
   command: cabal update
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
 
 - name: cabal hap
   command: cabal install happy
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
 
 - name: cabal pret
   command: cabal install pretty-show-1.9.5
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
 
 - name: cabal inst
   command: cabal install --only-dependencies
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
 
 - name: cabal configure
   command: cabal configure
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
 
 - name: cabal build
   command: cabal build
   args:
-    chdir: /vagrant_data/sql-constraint-propagation
+    chdir: /vagrant_data/pleak-sql-constraint-propagation
   when: result.changed
