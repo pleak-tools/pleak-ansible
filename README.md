@@ -25,3 +25,5 @@ To log into the virtual machine using SSH, use the `vagrant ssh` command.
 To stop the virtual machine, use `vagrant halt`
 
 To restart the virtual machine, use `vagrant reload`
+
+The virtual machine uses three servers to provide all necessary functionalities. These servers are automatically set up by services named `pleak-backend`, `pleak-frontend` and `pleak-leakswhen`. Use `sudo systemctl stop pleak-leakswhen` and `sudo systemctl restart pleak-leakswhen` commands to stop and restart these services or `sudo systemctl status pleak-leakswhen` command to check the status of the service (replace pleak-leakswhen with needed service name).
