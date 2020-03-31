@@ -12,5 +12,6 @@
     <mapping directory="$PROJECT_DIR$/pleak-pe-bpmn-editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-sensitivities-editor" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pleak-sql-analysis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pleak-sql-constraint-propagation" vcs="Git" />
   </component>
 </project>
